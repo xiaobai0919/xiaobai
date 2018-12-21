@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- 权限管理 -->
+	<bean id="rightDao" class="com.crm.ssh2.right.dao.impl.RightDaoimpl" parent="baseDao">
+	</bean>
+
+	<bean id="rightBiz" class="com.crm.ssh2.right.biz.impl.RightBizimpl" parent="baseBiz">
+		<property name="rightDao">
+			<ref bean="rightDao"/>
+		</property>
+	</bean>
+	
+	<bean id="rightAction" class="com.crm.ssh2.right.action.RightAction" parent="baseAction" scope="prototype">
+		<property name="rightBiz" >
+			<ref bean="rightBiz"/>
+		</property>
+	</bean>
+	
+	<!-- 系统角色管理 -->
+	<bean id="rightRoleDao" class="com.crm.ssh2.right.dao.impl.RightRoleDaoimpl" parent="baseDao">
+	</bean>
+
+	<bean id="rightRoleBiz" class="com.crm.ssh2.right.biz.impl.RightRoleBizimpl" parent="baseBiz">
+		<property name="rightRoleDao">
+			<ref bean="rightRoleDao"/>
+		</property>
+	</bean>
+	
+	<bean id="rightRoleAction" class="com.crm.ssh2.right.action.RightRoleAction" parent="baseAction" scope="prototype">
+		<property name="rightRoleBiz" >
+			<ref bean="rightRoleBiz"/>
+		</property>
+	</bean>
+	
+	<!-- 用户管理 -->
+	<bean id="rightUserDao" class="com.crm.ssh2.right.dao.impl.RightUserDaoimpl" parent="baseDao">
+	</bean>
+
+	<bean id="rightUserBiz" class="com.crm.ssh2.right.biz.impl.RightUserBizimpl" parent="baseBiz">
+		<property name="rightUserDao">
+			<ref bean="rightUserDao"/>
+		</property>
+	</bean>
+	
+	<bean id="rightUserAction" class="com.crm.ssh2.right.action.RightUserAction" parent="baseAction" scope="prototype">
+		<property name="rightUserBiz" >
+			<ref bean="rightUserBiz"/>
+		</property>
+	</bean>
+	
+</beans>

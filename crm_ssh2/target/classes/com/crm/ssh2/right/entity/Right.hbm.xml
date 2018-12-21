@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.right.entity.Right" table="right_right">
+		<id name="rCode" type="java.lang.String">
+			<column name="r_code"></column>
+		</id>
+	
+		<property name="rParentCode" type="java.lang.String">
+			<column name="r_parent_code"></column>
+		</property>
+		<property name="rType" type="java.lang.String">
+			<column name="r_type"></column>
+		</property>
+		<property name="rText" type="java.lang.String">
+			<column name="r_text"></column>
+		</property>
+		
+		<property name="rUrl" type="java.lang.String">
+			<column name="r_url"></column>
+		</property>
+		<property name="rTip" type="java.lang.String">
+			<column name="r_tip"></column>
+		</property>
+	</class>
+</hibernate-mapping>

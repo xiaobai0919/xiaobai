@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<!--CustCustomer -->
+	<package name="cust" extends="base" namespace="/cust">
+		<action name="custCustomerAction_*" class="custCustomerAction"
+			method="{1}">
+			<result name="success">
+				/cust/custCustomerAction_list.action
+			</result>
+			<result name="list">/cust/custs/list.jsp</result>
+		</action>
+
+
+		<!-- CustLinkman -->
+		<action name="custLinkmanAction_*" class="custLinkmanAction"
+			method="{1}">
+			<result name="success">
+				/cust/custLinkmanAction_list.action
+			</result>
+			<result name="list">/cust/custs/linkman.jsp</result>
+		</action>
+
+		<!-- CustActivity -->
+		<action name="custActivityAction_*" class="custActivityAction"
+			method="{1}">
+			<result name="success">
+				/cust/custActivityAction_list.action
+			</result>
+			<result name="list">/cust/custs/activities.jsp</result>
+		</action>
+
+		<!-- custLost -->
+		<action name="custLostAction_*" class="custLostAction" method="{1}">
+			<result name="success">
+				/cust/custLostAction_list.action
+			</result>
+			<result name="list">/cust/lost/list.jsp</result>
+		</action>
+
+		<!-- CustActivity -->
+		<action name="custServiceAction_*" class="custServiceAction"
+			method="{1}">
+			<result name="success">
+				/cust/custServiceAction_list.action
+			</result>
+			<result name="cl">/cust/service/deal_detail.jsp</result>
+			<result name="toAdd">/cust/service/add.jsp</result>
+			<result name="toMYD">/cust/service/feedback_detail.jsp</result>
+		</action>
+
+	</package>
+</struts>

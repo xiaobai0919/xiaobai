@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.sale.entity.SalePlan" table="sale_plan">
+		<id name="spId" type="java.lang.Integer">
+			<column name="sp_id"></column>
+			<generator class="identity"></generator>
+		</id>
+
+		<!-- <property name="scId" type="java.lang.Integer">
+			<column name="sc_id"></column>
+		</property> -->
+
+		<property name="spDate" type="java.lang.String">
+			<column name="sp_date"></column>
+		</property>
+
+		<property name="spTodo" type="java.lang.String">
+			<column name="sp_todo"></column>
+		</property>
+		
+		<property name="spResult" type="java.lang.String">
+			<column name="sp_result"></column>
+		</property>
+		
+		<many-to-one name="saleChance" class="com.crm.ssh2.sale.entity.SaleChance" column="sc_id">
+   		</many-to-one>
+		
+
+	</class>
+</hibernate-mapping> 

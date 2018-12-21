@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	
+	<!-- CustActivity -->
+	<bean id="custActivityDAO" class="com.crm.ssh2.cust.dao.impl.CustActivityDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="custActivityBiz" class="com.crm.ssh2.cust.biz.impl.CustActivityBizImpl" parent="baseBiz">
+		<property name="custActivityDAO">
+			<ref bean="custActivityDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="custActivityAction" class="com.crm.ssh2.cust.action.CustActivityAction"
+		parent="baseAction" scope="prototype">
+		<property name="custActivityBiz">
+			<ref bean="custActivityBiz" />
+		</property>
+	</bean>
+	
+	<!-- CustCustomer -->
+	<bean id="custCustomerDAO" class="com.crm.ssh2.cust.dao.impl.CustCustomerDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="custCustomerBiz" class="com.crm.ssh2.cust.biz.impl.CustCustomerBizImpl" parent="baseBiz">
+		<property name="custCustomerDAO">
+			<ref bean="custCustomerDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="custCustomerAction" class="com.crm.ssh2.cust.action.CustCustomerAction"
+		parent="baseAction" scope="prototype">
+		<property name="custCustomerBiz">
+			<ref bean="custCustomerBiz" />
+		</property>
+	</bean>
+	
+	<!-- CustLinkman -->
+	
+	<bean id="custLinkmanDAO" class="com.crm.ssh2.cust.dao.impl.CustLinkmanDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="custLinkmanBiz" class="com.crm.ssh2.cust.biz.impl.CustLinkmanBizImpl" parent="baseBiz">
+		<property name="custLinkmanDAO">
+			<ref bean="custLinkmanDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="custLinkmanAction" class="com.crm.ssh2.cust.action.CustLinkmanAction"
+		parent="baseAction" scope="prototype">
+		<property name="custLinkmanBiz">
+			<ref bean="custLinkmanBiz"/>
+		</property>
+	</bean>
+	
+	<!-- CustLost -->
+	<bean id="custLostDAO" class="com.crm.ssh2.cust.dao.impl.CustLostDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="custLostBiz" class="com.crm.ssh2.cust.biz.impl.CustLostBizImpl" parent="baseBiz">
+		<property name="custLostDAO">
+			<ref bean="custLostDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="custLostAction" class="com.crm.ssh2.cust.action.CustLostAction"
+		parent="baseAction" scope="prototype">
+		<property name="custLostBiz">
+			<ref bean="custLostBiz"/>
+		</property>
+	</bean>
+	
+	
+	<!-- CustLost -->
+	<bean id="custServiceDao" class="com.crm.ssh2.cust.dao.impl.CustServiceDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="custServiceBiz" class="com.crm.ssh2.cust.biz.impl.CustServiceBizImpl" parent="baseBiz">
+		<property name="custServiceDao">
+			<ref bean="custServiceDao"/>
+		</property>
+	</bean>
+	
+	<bean id="custServiceAction" class="com.crm.ssh2.cust.action.CustServiceAction"
+		parent="baseAction" scope="prototype">
+		<property name="custServiceBiz">
+			<ref bean="custServiceBiz"/>
+		</property>
+		<property name="basdDictBiz">
+			<ref bean="basdDictBiz" />
+		</property>
+		<property name="rightUserBiz" >
+			<ref bean="rightUserBiz"/>
+		</property>
+	</bean>
+	
+</beans>

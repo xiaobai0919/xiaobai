@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.sale.entity.SaleChance" table="sale_chance">
+		<id name="scId" type="java.lang.Integer">
+			<column name="sc_id"></column>
+			<generator class="identity"></generator>
+		</id>
+
+		<property name="scSource" type="java.lang.String">
+			<column name="sc_source"></column>
+		</property>
+
+		<property name="scCustName" type="java.lang.String">
+			<column name="sc_cust_name"></column>
+		</property>
+
+		<property name="scTitle" type="java.lang.String">
+			<column name="sc_title"></column>
+		</property>
+
+		<property name="scRate" type="java.lang.Integer">
+			<column name="sc_rate"></column>
+		</property>
+		
+		<property name="scLinkman" type="java.lang.String">
+			<column name="sc_linkman"></column>
+		</property>
+		
+		<property name="scTel" type="java.lang.String">
+			<column name="sc_tel"></column>
+		</property>
+		
+		<property name="scDesc" type="java.lang.String">
+			<column name="sc_desc"></column>
+		</property>
+		
+		<property name="scCreateId" type="java.lang.Integer">
+			<column name="sc_create_id"></column>
+		</property>
+		
+		<property name="scCreateBy" type="java.lang.String">
+			<column name="sc_create_by"></column>
+		</property>
+		
+		<property name="scCreateDate" type="java.lang.String">
+			<column name="sc_create_date"></column>
+		</property>
+		
+		<property name="scDueId" type="java.lang.Integer">
+			<column name="sc_due_id"></column>
+		</property>
+		
+		<property name="scDueTo" type="java.lang.String">
+			<column name="sc_due_to"></column>
+		</property>
+		
+		<property name="scDueDate" type="java.lang.String">
+			<column name="sc_due_date"></column>
+		</property>
+		
+		<property name="scStatus" type="java.lang.String">
+			<column name="sc_status"></column>
+		</property>
+		
+		<set lazy="false" name="salePlan" cascade="save-update" inverse="true"><!-- inverse是主控方 -->
+   			<key column="sc_id"></key>
+   			<one-to-many class="com.crm.ssh2.sale.entity.SalePlan"/>
+   		</set>
+   		
+	</class>
+</hibernate-mapping> 

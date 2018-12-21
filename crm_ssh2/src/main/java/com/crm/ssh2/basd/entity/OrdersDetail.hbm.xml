@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.basd.entity.OrdersDetail" table="orders_detail">
+		<id name="boId" type="java.lang.Integer">
+			<column name="bo_id"></column>
+			<generator class="identity"></generator>
+		</id>
+	
+		<property name="boCustomer" type="java.lang.String">
+			<column name="bo_customer"></column>
+		</property>
+		<property name="boDate" type="java.lang.String">
+			<column name="bo_date"></column>
+		</property>
+		<property name="boAddress" type="java.lang.String">
+			<column name="bo_address"></column>
+		</property>
+		
+		<property name="boStatus" type="java.lang.String">
+			<column name="bo_status"></column>
+		</property>
+		
+		<property name="bolCount" type="java.lang.Integer">
+			<column name="bol_count"></column>
+		</property>
+		
+		<property name="bolPrice" type="java.lang.Float">
+			<column name="bol_price"></column>
+		</property>
+		
+		<property name="bolBpId" type="java.lang.Integer">
+			<column name="bol_bp_id"></column>
+		</property>
+		
+		<property name="bpName" type="java.lang.String">
+			<column name="bp_name"></column>
+		</property>
+		
+		<property name="bpPrice" type="java.lang.Float">
+			<column name="bp_price"></column>
+		</property>
+		
+		<property name="bolUnit" type="java.lang.String">
+			<column name="bol_unit"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

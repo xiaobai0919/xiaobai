@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.right.entity.RightUser" table="right_user">
+		<id name="ruId" type="java.lang.Integer">
+			<column name="ru_id"></column>
+			<generator class="native"></generator>
+		</id>
+	
+		<property name="ruName" type="java.lang.String">
+			<column name="ru_name"></column>
+		</property>
+		<property name="ruPassword" type="java.lang.String">
+			<column name="ru_password"></column>
+		</property>
+		<property name="ruRoleId" type="java.lang.Integer">
+			<column name="ru_role_id"></column>
+		</property>
+		
+		<property name="ruFlag" type="java.lang.Integer">
+			<column name="ru_flag"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

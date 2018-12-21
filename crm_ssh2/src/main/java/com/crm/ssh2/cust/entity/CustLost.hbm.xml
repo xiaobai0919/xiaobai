@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.cust.entity.CustLost" table="cust_lost">
+		<id name="clId" type="java.lang.Integer">
+			<column name="cl_id"></column>
+			<generator class="native" />
+		</id>
+
+		<property name="clCustNo" type="java.lang.String">
+			<column name="cl_cust_no"></column>
+		</property>
+
+		<property name="clCustName" type="java.lang.String">
+			<column name="cl_cust_name"></column>
+		</property>
+
+		<property name="clCustManagerId" type="java.lang.Integer">
+			<column name="cl_cust_manager_id"></column>
+		</property>
+
+		<property name="clCustManagerName" type="java.lang.String">
+			<column name="cl_cust_manager_name"></column>
+		</property>
+		
+		<property name="clLastOrderDate" type="java.lang.String">
+			<column name="cl_last_order_date"></column>
+		</property>
+		
+		<property name="clLostDate" type="java.lang.String">
+			<column name="cl_lost_date"></column>
+		</property>
+		
+		<property name="clDelay" type="java.lang.String">
+			<column name="cl_delay"></column>
+		</property>
+		
+		<property name="clReason" type="java.lang.String">
+			<column name="cl_reason"></column>
+		</property>
+		
+		<property name="clStatus" type="java.lang.String">
+			<column name="cl_status"></column>
+		</property>
+	</class>
+</hibernate-mapping> 

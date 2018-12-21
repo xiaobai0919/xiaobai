@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- 字典数据 -->
+	<bean id="basdDictDao" class="com.crm.ssh2.basd.dao.impl.BasdDictDaoimpl"
+		parent="baseDao">
+	</bean>
+	<bean id="basdDictBiz" class="com.crm.ssh2.basd.biz.impl.BasdDictBizimpl"
+		parent="baseBiz">
+		<property name="basdDictDao">
+			<ref bean="basdDictDao" />
+		</property>
+	</bean>
+	<bean id="basdDictAction" class="com.crm.ssh2.basd.action.BasdDictAction"
+		parent="baseAction" scope="prototype">
+		<property name="basdDictBiz">
+			<ref bean="basdDictBiz" />
+		</property>
+	</bean>
+	
+	<!-- 产品 -->
+	<bean id="basdProductDao" class="com.crm.ssh2.basd.dao.impl.BasdProductDaoimpl"
+		parent="baseDao">
+	</bean>
+	<bean id="basdProductBiz" class="com.crm.ssh2.basd.biz.impl.BasdProductBizimpl"
+		parent="baseBiz">
+		<property name="basdProductDao">
+			<ref bean="basdProductDao" />
+		</property>
+	</bean>
+	<bean id="basdProductAction" class="com.crm.ssh2.basd.action.BasdProductAction"
+		parent="baseAction" scope="prototype">
+		<property name="basdProductBiz">
+			<ref bean="basdProductBiz" />
+		</property>
+	</bean>
+	
+	<!-- 仓库 -->
+	<bean id="basdStorageDao" class="com.crm.ssh2.basd.dao.impl.BasdStorageDaoimpl"
+		parent="baseDao">
+	</bean>
+	<bean id="basdStorageBiz" class="com.crm.ssh2.basd.biz.impl.BasdStorageBizimpl"
+		parent="baseBiz">
+		<property name="basdStorageDao">
+			<ref bean="basdStorageDao" />
+		</property>
+	</bean>
+	<bean id="basdStorageAction" class="com.crm.ssh2.basd.action.BasdStorageAction"
+		parent="baseAction" scope="prototype">
+		<property name="basdStorageBiz">
+			<ref bean="basdStorageBiz" />
+		</property>
+	</bean>
+	
+	<!-- 历史订单 -->
+	<bean id="basdOrdersDao" class="com.crm.ssh2.basd.dao.impl.BasdOrdersDaoimpl"
+		parent="baseDao">
+	</bean>
+	<bean id="basdOrdersBiz" class="com.crm.ssh2.basd.biz.impl.BasdOrdersBizimpl"
+		parent="baseBiz">
+		<property name="basdOrdersDao">
+			<ref bean="basdOrdersDao" />
+		</property>
+	</bean>
+	<bean id="basdOrdersAction" class="com.crm.ssh2.basd.action.BasdOrdersAction"
+		parent="baseAction" scope="prototype">
+		<property name="basdOrdersBiz">
+			<ref bean="basdOrdersBiz" />
+		</property>
+	</bean>
+	
+	<!-- 订单详情 -->
+	<bean id="ordersDetailDAO" class="com.crm.ssh2.basd.dao.impl.OrdersDatailDaoimpl"
+		parent="baseDao">
+	</bean>
+	<bean id="ordersDetailBiz" class="com.crm.ssh2.basd.biz.impl.OrdersDetailBizimpl"
+		parent="baseBiz">
+		<property name="ordersDetailDAO">
+			<ref bean="ordersDetailDAO" />
+		</property>
+	</bean>
+	<bean id="ordersDetailAction" class="com.crm.ssh2.basd.action.OrdersDetailAction"
+		parent="baseAction" scope="prototype">
+		<property name="ordersDetailBiz">
+			<ref bean="ordersDetailBiz" />
+		</property>
+	</bean>
+	
+</beans>

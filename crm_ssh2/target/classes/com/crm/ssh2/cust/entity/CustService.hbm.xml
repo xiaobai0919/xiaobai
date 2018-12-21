@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.cust.entity.CustService" table="cust_service">
+		<id name="csId" type="java.lang.Integer">
+			<column name="cs_id"></column>
+		</id>
+
+		<property name="csType" type="java.lang.String">
+			<column name="cs_type"></column>
+		</property>
+
+		<property name="csTitle" type="java.lang.String">
+			<column name="cs_title"></column>
+		</property>
+
+		<property name="csCustNo" type="java.lang.String">
+			<column name="cs_cust_no"></column>
+		</property>
+
+		<property name="csCustName" type="java.lang.String">
+			<column name="cs_cust_name"></column>
+		</property>
+		
+		<property name="csStatus" type="java.lang.String">
+			<column name="cs_status"></column>
+		</property>
+		
+		<property name="csRequest" type="java.lang.String">
+			<column name="cs_request"></column>
+		</property>
+		
+		<property name="csCreateId" type="java.lang.Integer">
+			<column name="cs_create_id"></column>
+		</property>
+		
+		<property name="csCreateBy" type="java.lang.String">
+			<column name="cs_create_by"></column>
+		</property>
+		
+		<property name="csCreateDate" type="java.lang.String">
+			<column name="cs_create_date"></column>
+		</property>
+		
+		<property name="csDueId" type="java.lang.String">
+			<column name="cs_due_id"></column>
+		</property>
+		
+		<property name="csDueTo" type="java.lang.String">
+			<column name="cs_due_to"></column>
+		</property>
+		
+		<property name="csDueDate" type="java.lang.String">
+			<column name="cs_due_date"></column>
+		</property>
+		
+		<property name="csDealBy" type="java.lang.String">
+			<column name="cs_deal_by"></column>
+		</property>
+		
+		<property name="csDealId" type="java.lang.Integer">
+			<column name="cs_deal_id"></column>
+		</property>
+		
+		<property name="csDeal" type="java.lang.String">
+			<column name="cs_deal"></column>
+		</property>
+		
+		<property name="csDealDate" type="java.lang.String">
+			<column name="cs_deal_date"></column>
+		</property>
+		
+		<property name="csResult" type="java.lang.String">
+			<column name="cs_result"></column>
+		</property>
+		
+		<property name="csSatisfy" type="java.lang.Integer">
+			<column name="cs_satisfy"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping> 

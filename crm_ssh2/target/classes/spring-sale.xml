@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+	<!-- 营销机会管理 -->
+	<bean id="saleChanceDAO" class="com.crm.ssh2.sale.dao.impl.SaleChanceDAOImpl" parent="baseDao">
+	</bean>
+
+	<bean id="saleChanceBiz" class="com.crm.ssh2.sale.biz.impl.SaleChanceBizImpl" parent="baseBiz">
+		<property name="saleChanceDAO">
+			<ref bean="saleChanceDAO"/>
+		</property>
+	</bean>
+	
+	<bean id="saleChanceAction" class="com.crm.ssh2.sale.action.SaleChanceAction" parent="baseAction" scope="prototype">
+		<property name="saleChanceBiz" >
+			<ref bean="saleChanceBiz"/>
+		</property>
+		<property name="rightUserBiz" >
+			<ref bean="rightUserBiz"/>
+		</property>
+	</bean>
+	
+	<!-- 开发计划管理 -->
+	<bean id="salePlanDao" class="com.crm.ssh2.sale.dao.impl.SalePlanDAOImpl" parent="baseDao">
+	</bean>
+	
+	<bean id="salePlanBiz" class="com.crm.ssh2.sale.biz.impl.SalePlanBizImpl" parent="baseBiz">
+		<property name="salePlanDao">
+			<ref bean="salePlanDao"/>
+		</property>
+	</bean>
+	
+	<bean id="salePlanAction" class="com.crm.ssh2.sale.action.SalePlanAction" parent="baseAction"  scope="prototype">
+		<property name="salePlanBiz">
+			<ref bean="salePlanBiz"/>
+		</property>
+	</bean>
+	
+</beans>

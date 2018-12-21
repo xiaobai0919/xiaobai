@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="sale" extends="base" namespace="/sale">
+	
+		<!-- 营销机会管理 -->
+		<action name="saleChanceAction_*" class="saleChanceAction" method="{1}">
+			<result name="success" type="redirect">
+				/sale/saleChanceAction_list.action
+			</result>
+			<result name="list">/sale/list.jsp</result>
+			<result name="ZP">/sale/dispatch.jsp</result>
+			<result name="edit">/sale/edit.jsp</result>
+			<!-- 制定计划 -->
+			<result name="ZD">/sale/dev_plan.jsp</result>
+			<!-- 执行计划 -->
+			<result name="ZX">/sale/dev_execute.jsp</result>
+			<!-- 开发成功 -->
+			<result name="WIN">/sale/dev.jsp</result>
+			<!-- 查看 -->
+			<result name="Look">/sale/dev_detail.jsp</result>
+			
+			
+		</action>
+		
+		<!-- 开发计划管理 -->
+		<action name="salePlanAction_*" class="salePlanAction" method="{1}">
+			<result name="success" type="redirect">
+				/sale/salePlanAction_list.action
+			</result>
+			<result name="lista">/sale/dev_plan.jsp</result>
+		</action>
+	</package>
+</struts>

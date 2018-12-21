@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<package name="basd" extends="base" namespace="/basd">
+		<action name="basdDictAction_*" class="basdDictAction" method="{1}">
+			<result name="success" type="redirect">
+				/basd/basdDictAction_list.action
+			</result>
+			<result name="list">/basd/dict.jsp</result>
+			<result name="add">/basd/dict_add.jsp</result>
+			<result name="load">/basd/dict_edit.jsp</result>
+		</action>
+		<action name="basdProductAction_*" class="basdProductAction" method="{1}">
+			<result name="success" type="redirect">
+				/basd/basdProductAction_list.action
+			</result>
+		</action>
+		<action name="basdStorageAction_*" class="basdStorageAction" method="{1}">
+			<result name="success" type="redirect">
+				/basd/basdStorageAction_list.action
+			</result>
+		</action>
+		<!--  -->
+		<action name="basdOrdersAction_*" class="basdOrdersAction" method="{1}">
+			<result name="success" type="redirect">
+				/basd/basdOrdersAction_list.action
+			</result>
+			<result name="list">/basd/orders.jsp</result>
+		</action>
+		
+		<!-- 订单详情(视图) -->
+		<action name="ordersDetailAction_*" class="ordersDetailAction" method="{1}">
+			<result name="success" type="redirect">
+				/basd/ordersDetailAction_list.action
+			</result>
+			<result name="list">/basd/orders_detail.jsp</result>
+		</action>
+		
+	</package>
+</struts>

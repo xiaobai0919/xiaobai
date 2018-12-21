@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.basd.entity.BasdOrdersLine" table="basd_orders_line">
+		<id name="bolId" type="java.lang.Integer">
+			<column name="bol_id"></column>
+			<generator class="identity"></generator>
+		</id>
+	
+		<property name="bolBoId" type="java.lang.Integer">
+			<column name="bol_bo_id"></column>
+		</property>
+		<property name="bolBpId" type="java.lang.Integer">
+			<column name="bol_bp_id"></column>
+		</property>
+		<property name="bolCount" type="java.lang.Integer">
+			<column name="bol_count"></column>
+		</property>
+		
+		<property name="bolUnit" type="java.lang.String">
+			<column name="bol_unit"></column>
+		</property>
+		<property name="bolPrice" type="java.lang.Double">
+			<column name="bol_price"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

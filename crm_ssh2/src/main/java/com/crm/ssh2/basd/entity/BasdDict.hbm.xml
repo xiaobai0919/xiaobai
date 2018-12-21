@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.basd.entity.BasdDict" table="basd_dict">
+		<id name="bdId" type="java.lang.Integer">
+			<column name="bd_id"></column>
+			<generator class="identity"></generator>
+		</id>
+	
+		<property name="bdType" type="java.lang.String">
+			<column name="bd_type"></column>
+		</property>
+		<property name="bdItem" type="java.lang.String">
+			<column name="bd_item"></column>
+		</property>
+		<property name="bdValue" type="java.lang.String">
+			<column name="bd_value"></column>
+		</property>
+		
+		<property name="bdIsEditable" type="java.lang.Integer">
+			<column name="bd_is_editable"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.cust.entity.CustLinkman" table="cust_linkman">
+		<id name="clkID" type="java.lang.Integer">
+			<column name="clk_id"></column>
+			<generator class="native" />
+		</id>
+
+		<property name="clkCustNo" type="java.lang.String">
+			<column name="clk_cust_no"></column>
+		</property>
+
+		<property name="clkCustName" type="java.lang.String">
+			<column name="clk_cust_name"></column>
+		</property>
+
+		<property name="clkName" type="java.lang.String">
+			<column name="clk_name"></column>
+		</property>
+
+		<property name="clkSex" type="java.lang.String">
+			<column name="clk_sex"></column>
+		</property>
+		
+		<property name="clkPostion" type="java.lang.String">
+			<column name="clk_postion"></column>
+		</property>
+		
+		<property name="clkTel" type="java.lang.String">
+			<column name="clk_tel"></column>
+		</property>
+		
+		<property name="clkMobile" type="java.lang.String">
+			<column name="clk_mobile"></column>
+		</property>
+		
+		<property name="clkMenu" type="java.lang.String">
+			<column name="clk_menu"></column>
+		</property>
+	</class>
+</hibernate-mapping> 

@@ -1,0 +1,51 @@
+/*!
+ * jQuery UI Tooltip 1.9.2
+ * http://jqueryui.com
+ *
+ * Copyright 2012 jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+.ui-tooltip {
+    padding: 0px;
+    position: absolute;
+    z-index: 9999;
+    max-width: 300px;
+    -webkit-box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 0 0px #aaa;
+}
+
+/* Fades and background-images don't work well together in IE6, drop the image */
+* html .ui-tooltip {
+    background-image: none;
+}
+
+body .ui-tooltip {
+    border-width: 0px;
+}
+
+.ui-tooltip-content {
+    text-align: left;
+    padding: 5px;
+    width: auto;
+    /*min-width: 120px;*/
+    max-width: 280px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(51, 153, 204, 0.8);
+    border: 1px solid rgb(102, 153, 204);
+    border-radius: 5px;
+}
+
+.ui-tooltip-arrow {
+    padding: 0px;
+    margin: 0px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-image: initial;
+    border-color: transparent rgb(102, 153, 204) transparent transparent;
+    left: -20px;
+    top: 5.5px;
+}

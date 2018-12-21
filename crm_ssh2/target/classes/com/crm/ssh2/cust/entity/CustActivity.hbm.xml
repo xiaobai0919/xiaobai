@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.cust.entity.CustActivity" table="cust_activity">
+		<id name="caID" type="java.lang.Integer">
+			<column name="ca_id"></column>
+			<generator class="native" />
+		</id>
+
+		<property name="caCustNo" type="java.lang.String">
+			<column name="ca_cust_no"></column>
+		</property>
+
+		<property name="caCustName" type="java.lang.String">
+			<column name="ca_cust_name"></column>
+		</property>
+
+		<property name="caDate" type="java.lang.String">
+			<column name="ca_date"></column>
+		</property>
+
+		<property name="caPlace" type="java.lang.String">
+			<column name="ca_place"></column>
+		</property>
+		
+		<property name="caTitle" type="java.lang.String">
+			<column name="ca_title"></column>
+		</property>
+		
+		<property name="caRemark" type="java.lang.String">
+			<column name="ca_remark"></column>
+		</property>
+		
+		<property name="caDesc" type="java.lang.String">
+			<column name="ca_desc"></column>
+		</property>
+	</class>
+</hibernate-mapping> 

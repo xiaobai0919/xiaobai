@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.cust.entity.CustCustomer"
+		table="cust_customer">
+		<id name="ccNo" type="java.lang.String">
+			<column name="cc_no"></column>
+			<generator class="native" />
+		</id>
+
+		<property name="ccName" type="java.lang.String">
+			<column name="cc_name"></column>
+		</property>
+
+		<property name="ccRegion" type="java.lang.String">
+			<column name="cc_region"></column>
+		</property>
+
+		<property name="ccManagerId" type="java.lang.Integer">
+			<column name="cc_manager_id"></column>
+		</property>
+
+		<property name="ccManageName" type="java.lang.String">
+			<column name="cc_manager_name"></column>
+		</property>
+
+		<property name="ccLevel" type="java.lang.Integer">
+			<column name="cc_level"></column>
+		</property>
+
+		<property name="ccLevelLabel" type="java.lang.String">
+			<column name="cc_level_label"></column>
+		</property>
+
+		<property name="ccSatisfy" type="java.lang.Integer">
+			<column name="cc_satisfy"></column>
+		</property>
+
+		<property name="ccCredit" type="java.lang.Integer">
+			<column name="cc_credit"></column>
+		</property>
+
+		<property name="ccAddress" type="java.lang.String">
+			<column name="cc_address"></column>
+		</property>
+		
+		<property name="ccZip" type="java.lang.String">
+			<column name="cc_zip"></column>
+		</property>
+		
+		<property name="ccTel" type="java.lang.String">
+			<column name="cc_tel"></column>
+		</property>
+		
+		<property name="ccFax" type="java.lang.String">
+			<column name="cc_fax"></column>
+		</property>
+		
+		<property name="ccWebsite" type="java.lang.String">
+			<column name="cc_website"></column>
+		</property>
+		
+		<property name="ccLicenceNo" type="java.lang.String">
+			<column name="cc_licence_no"></column>
+		</property>
+		
+		<property name="ccChieftain" type="java.lang.String">
+			<column name="cc_chieftain"></column>
+		</property>
+		
+		<property name="ccBankroll" type="java.lang.Integer">
+			<column name="cc_bankroll"></column>
+		</property>
+		
+		<property name="ccTurnover" type="java.lang.Integer">
+			<column name="cc_turnover"></column>
+		</property>
+		
+		<property name="ccBank" type="java.lang.String">
+			<column name="cc_bank"></column>
+		</property>
+		
+		<property name="ccBankAccount" type="java.lang.String">
+			<column name="cc_bank_account"></column>
+		</property>
+		
+		<property name="ccLocalTaxNo" type="java.lang.String">
+			<column name="cc_local_tax_no"></column>
+		</property>
+		
+		<property name="ccNationalTaxNo" type="java.lang.String">
+			<column name="cc_national_tax_no"></column>
+		</property>
+		
+		<property name="ccStatus" type="java.lang.String">
+			<column name="cc_status"></column>
+		</property>
+	</class>
+</hibernate-mapping> 

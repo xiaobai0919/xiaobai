@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.crm.ssh2.basd.entity.BasdStorage" table="basd_storage">
+		<id name="bsId" type="java.lang.Integer">
+			<column name="bs_id"></column>
+		</id>
+		
+		<property name="bpId" type="java.lang.Integer">
+			<column name="bp_id"></column>
+		</property>
+		<property name="bsWarehouse" type="java.lang.String">
+			<column name="bs_warehouse"></column>
+		</property>
+		<property name="bsWare" type="java.lang.String">
+			<column name="bs_ware"></column>
+		</property>
+		
+		<property name="bsCount" type="java.lang.Integer">
+			<column name="bs_count"></column>
+		</property>
+		<property name="bsMenu" type="java.lang.String">
+			<column name="bs_menu"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>
